@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+    <title>Skills-HTML-CSS</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+	<h1>Application</h1>
+	<p id="instructions">
+		Please fill out the form below and submit your information.
+	</p>
+	<form action="/applications" method="POST">
+		<label>First Name:
+			<input type="text"/>
+		</label>
+		<label>Last Name:
+			<input id="last-name" type="text"/>
+		</label>
+		<br>
+		<label>Salary:
+			<input type="number"/>
+		</label>
+		<br>
+		<label>Job:
+			<select name="job">
+				<option value="Software Engineer">Software Engineer</option>
+				<option value="QA Engineer">QA Engineer</option>
+				<option value="Product Manager">Product Manager</option>
+			</select>
+			
+		</label>
+	<br>		
+
+
+
+
+		<input type="submit" value="Apply"/>
+	</form>
+</body>
+</html>
