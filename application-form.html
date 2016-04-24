@@ -1,25 +1,20 @@
-<!doctype html>
-<html>
-<head>
-    <title>Skills-HTML-CSS</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
+{% extends "base.html" %}
+{% block content %}
 
-<body>
 	<h1>Application</h1>
 	<p id="instructions">
 		Please fill out the form below and submit your information.
 	</p>
-	<form action="/applications" method="POST">
+	<form action="/application-response" method="POST">
 		<label>First Name:
-			<input type="text"/>
+			<input type="text" name="firstname"/>
 		</label>
 		<label>Last Name:
-			<input id="last-name" type="text"/>
+			<input id="last-name" type="text" name="lastname"/>
 		</label>
 		<br>
 		<label>Salary:
-			<input type="number"/>
+			<input type="number" name="salary"/>
 		</label>
 		<br>
 		<label>Job:
@@ -30,12 +25,7 @@
 			</select>
 			
 		</label>
-	<br>		
-
-
-
-
-		<input type="submit" value="Apply"/>
-	</form>
-</body>
-</html>
+	<br>
+	<input type="submit" value="Apply"/>	
+</form>
+{% endblock %}
